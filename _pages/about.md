@@ -1,10 +1,12 @@
 ---
 permalink: /
-title: "Welcome!"
+title: "Ninad Jadhav"
+excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+
 ---
 I am robotics researcher in the School of Engineering and Applied Sciences at Harvard University. My research interest spans the domain of multi-robot system, wireless sensing and field robotics for wildlife monitoring.
 
