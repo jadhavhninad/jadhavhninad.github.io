@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Ninad Jadhav"
+title: "Welcome!"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
