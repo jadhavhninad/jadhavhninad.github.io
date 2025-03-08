@@ -15,6 +15,6 @@ News
 
 ## Video Gallery
  <table>
-    <th style="padding-right: 8px"><iframe src="https://www.youtube.com/watch?v=BbZWJM40wBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></th>
-    <th style="padding-right: 8px"><iframe src="https://www.youtube.com/watch?v=aP4RjeXyEKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></th>
+    <th style="padding-right: 8px"><iframe src="https://www.youtube.com/embed/BbZWJM40wBk?si=5Cx8uj5CxkPzwMBv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></th>
+    <th style="padding-right: 8px"><iframe src="https://www.youtube.com/embed/aP4RjeXyEKE?si=E1n4tZ3_sxOyxHZX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></th>
 </table> 
