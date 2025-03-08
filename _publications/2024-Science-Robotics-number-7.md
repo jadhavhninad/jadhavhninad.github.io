@@ -6,7 +6,7 @@ permalink: /publication/2024-Science-Robotics-number-7
 date: 2024-10-30
 venue: 'Science Robotics'
 paperurl: 'https://jadhavhninad.github.io/files/2024-Science-Robotics-number-7.pdf'
-citation: '** `Jadhav, Ninad*` **, Sushmita Bhattacharya*, Daniel Vogt, Yaniv Aluma, Pernille Tonessen, Akarsh Prabhakara, Swarun Kumar, Shane Gero, Robert J. Wood and Stephanie Gil. “Reinforcement learning-based framework for whale rendezvous via autonomous sensing robots.” Science robotics 9 95 (2024): eadn7299 .'
+citation: '<strong>Jadhav, Ninad*</strong>, Sushmita Bhattacharya*, Daniel Vogt, Yaniv Aluma, Pernille Tonessen, Akarsh Prabhakara, Swarun Kumar, Shane Gero, Robert J. Wood and Stephanie Gil. “Reinforcement learning-based framework for whale rendezvous via autonomous sensing robots.” Science robotics 9 95 (2024): eadn7299 .'
 ---
 
 <!-- excerpt: 'This paper is about the number 1. The number 2 is left for future work.'-->
