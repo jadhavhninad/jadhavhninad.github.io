@@ -3,6 +3,7 @@ title: "Active rendezvous for multi-robot pose graph optimization using sensing 
 collection: publications
 category: conferences
 permalink: /publication/2019-ISRR-number-1
+excerpt: 'Framework for improving collaboration amongst a team of robots performing distributed Pose Graph Optimization (PGO)'
 date: 2019-10-10
 venue: 'International Symposium of Robotics Research (ISRR)'
 paperurl: 'https://jadhavhninad.github.io/files/2019-ISRR-number-1.pdf'
