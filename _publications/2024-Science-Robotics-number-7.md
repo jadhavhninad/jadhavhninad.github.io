@@ -6,7 +6,7 @@ permalink: /publication/2024-Science-Robotics-number-7
 date: 2024-10-30
 venue: 'Science Robotics'
 paperurl: 'https://jadhavhninad.github.io/files/2024-Science-Robotics-number-7.pdf'
-citation: '<strong>Jadhav, Ninad*</strong>, Sushmita Bhattacharya*, Daniel Vogt, Yaniv Aluma, Pernille Tonessen, Akarsh Prabhakara, Swarun Kumar, Shane Gero, Robert J. Wood and Stephanie Gil.'
+citation: '<strong>Ninad Jadhav*</strong>, Sushmita Bhattacharya\*, Daniel Vogt, Yaniv Aluma, Pernille Tonessen, Akarsh Prabhakara, Swarun Kumar, Shane Gero, Robert J. Wood and Stephanie Gil.'
 ---
 
 <!-- excerpt: 'This paper is about the number 1. The number 2 is left for future work.'-->
