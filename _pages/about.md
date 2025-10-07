@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am Postdoctoral Fellow in the School of Engineering and Applied Sciences at Harvard University. My research interest spans the domain of multi-robot coordination, wireless sensing and field robotics for wildlife monitoring. 
+I am Postdoctoral Fellow in the School of Engineering and Applied Sciences at Harvard University. My research interest spans the domain of multi-robot coordination, wireless sensing and field robotics for environmental monitoring. 
 
 News
 ------
