@@ -45,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/ninja-hu"
+  github           : "nhjadhav"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -59,7 +59,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "nhjadhav"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -158,6 +158,7 @@ include:
   - _pages
   - files
 exclude:
+  - files/Ninad_Jadhav_CV.pdf
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -213,7 +214,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  research:
+  portfolio:
     output: true
     permalink: /:collection/:path/
   publications:
@@ -222,9 +223,9 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  # talks:
-  #   output: true
-  #   permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -265,7 +266,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _research
+  # _portfolio
   - scope:
       path: ""
       type: portfolio
@@ -275,13 +276,13 @@ defaults:
       share: true
       comment: true
   # _talks
-  # - scope:
-  #     path: ""
-  #     type: talks
-  #   values:
-  #     layout: talk
-  #     author_profile: true
-  #     share: true
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
 
 
 # Sass/SCSS
