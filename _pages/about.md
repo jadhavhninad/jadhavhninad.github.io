@@ -32,10 +32,51 @@ News
 
 ## Video Gallery
 
-<div class="video-grid">
-  <div class="video-embed"><iframe loading="lazy" src="https://www.youtube.com/embed/BbZWJM40wBk?si=5Cx8uj5CxkPzwMBv" title="Robotics research video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-  <div class="video-embed"><iframe loading="lazy" src="https://www.youtube.com/embed/aP4RjeXyEKE?si=E1n4tZ3_sxOyxHZX" title="Robotics research video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-  <div class="video-embed"><iframe loading="lazy" src="https://www.youtube.com/embed/CvZhIziyWdg?si=2tDdgg40E2-N2VN8" title="Robotics research video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-  <div class="video-embed"><iframe loading="lazy" src="https://www.youtube.com/embed/yiJw1Ry2kzY?si=vl3qyEKYPXmHJplj" title="Robotics research video 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-  <div class="video-embed"><iframe loading="lazy" src="https://www.youtube.com/embed/zpxmEFTSMZk?si=MqoXy3ums5fspfhA" title="Robotics research video 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-carousel" data-video-carousel>
+  <div class="video-carousel__header">
+    <p><span data-video-current>1</span> / 5</p>
+    <div class="video-carousel__controls">
+      <button type="button" data-video-previous aria-label="Show previous video">&larr;</button>
+      <button type="button" data-video-next aria-label="Show next video">&rarr;</button>
+    </div>
+  </div>
+  <div class="video-carousel__viewport" data-video-viewport tabindex="0" aria-label="Research video gallery">
+    <article class="video-slide" data-video-slide data-youtube-id="BbZWJM40wBk">
+      <a class="video-slide__poster" data-video-play href="https://www.youtube.com/watch?v=BbZWJM40wBk" aria-label="Play robotics research video 1">
+        <img loading="lazy" src="https://i.ytimg.com/vi/BbZWJM40wBk/hqdefault.jpg" alt="Robotics research video 1 thumbnail">
+        <span class="video-slide__play" aria-hidden="true">&#9654;</span>
+      </a>
+    </article>
+    <article class="video-slide" data-video-slide data-youtube-id="aP4RjeXyEKE">
+      <a class="video-slide__poster" data-video-play href="https://www.youtube.com/watch?v=aP4RjeXyEKE" aria-label="Play robotics research video 2">
+        <img loading="lazy" src="https://i.ytimg.com/vi/aP4RjeXyEKE/hqdefault.jpg" alt="Robotics research video 2 thumbnail">
+        <span class="video-slide__play" aria-hidden="true">&#9654;</span>
+      </a>
+    </article>
+    <article class="video-slide" data-video-slide data-youtube-id="CvZhIziyWdg">
+      <a class="video-slide__poster" data-video-play href="https://www.youtube.com/watch?v=CvZhIziyWdg" aria-label="Play robotics research video 3">
+        <img loading="lazy" src="https://i.ytimg.com/vi/CvZhIziyWdg/hqdefault.jpg" alt="Robotics research video 3 thumbnail">
+        <span class="video-slide__play" aria-hidden="true">&#9654;</span>
+      </a>
+    </article>
+    <article class="video-slide" data-video-slide data-youtube-id="yiJw1Ry2kzY">
+      <a class="video-slide__poster" data-video-play href="https://www.youtube.com/watch?v=yiJw1Ry2kzY" aria-label="Play robotics research video 4">
+        <img loading="lazy" src="https://i.ytimg.com/vi/yiJw1Ry2kzY/hqdefault.jpg" alt="Robotics research video 4 thumbnail">
+        <span class="video-slide__play" aria-hidden="true">&#9654;</span>
+      </a>
+    </article>
+    <article class="video-slide" data-video-slide data-youtube-id="zpxmEFTSMZk">
+      <a class="video-slide__poster" data-video-play href="https://www.youtube.com/watch?v=zpxmEFTSMZk" aria-label="Play robotics research video 5">
+        <img loading="lazy" src="https://i.ytimg.com/vi/zpxmEFTSMZk/hqdefault.jpg" alt="Robotics research video 5 thumbnail">
+        <span class="video-slide__play" aria-hidden="true">&#9654;</span>
+      </a>
+    </article>
+  </div>
+  <div class="video-carousel__dots" aria-label="Choose a video">
+    <button type="button" data-video-dot aria-label="Show video 1"></button>
+    <button type="button" data-video-dot aria-label="Show video 2"></button>
+    <button type="button" data-video-dot aria-label="Show video 3"></button>
+    <button type="button" data-video-dot aria-label="Show video 4"></button>
+    <button type="button" data-video-dot aria-label="Show video 5"></button>
+  </div>
 </div>

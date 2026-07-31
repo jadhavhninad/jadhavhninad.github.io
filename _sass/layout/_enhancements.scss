@@ -317,30 +317,168 @@
   }
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+.video-carousel {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+}
 
-  @include breakpoint($medium) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.video-carousel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+
+  p {
+    margin: 0;
+    color: var(--global-base-color);
+    font-family: $sans-serif;
+    font-size: $type-size-7;
+    font-weight: 700;
   }
 }
 
-.video-embed {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-  border-radius: 10px;
-  background: #000;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+.video-carousel__controls {
+  display: flex;
+  gap: 0.45rem;
 
-  iframe {
+  button {
+    display: inline-flex;
+    width: 2.25rem;
+    height: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--global-border-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+    background: var(--global-bg-color);
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--global-link-color);
+      color: #fff;
+      background: var(--global-link-color);
+    }
+  }
+}
+
+.video-carousel__viewport {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--global-link-color);
+    outline-offset: 3px;
+  }
+}
+
+.video-slide {
+  position: relative;
+  min-width: 100%;
+  aspect-ratio: 16 / 9;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.video-slide__poster {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  background: #111;
+  text-decoration: none !important;
+
+  &::after {
     position: absolute;
     inset: 0;
+    content: "";
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.24), transparent 48%);
+    transition: background 0.18s ease;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.16), rgba(47, 127, 147, 0.08));
+  }
+
+  img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+}
+
+.video-slide__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.58);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.video-slide__poster:hover .video-slide__play,
+.video-slide__poster:focus-visible .video-slide__play {
+  background: var(--global-link-color);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.video-slide__player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+
+  button {
+    width: 0.55rem;
+    height: 0.55rem;
+    padding: 0;
     border: 0;
+    border-radius: 999px;
+    background: var(--global-border-color);
+    cursor: pointer;
+    transition: width 0.18s ease, background 0.18s ease;
+
+    &.is-active {
+      width: 1.5rem;
+      background: var(--global-link-color);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-link-color);
+      outline-offset: 3px;
+    }
   }
 }
 
@@ -357,7 +495,10 @@
   .archive-card-list .archive__item,
   .publication-list .archive__item,
   .compact-publication-card,
-  .research-card {
+  .research-card,
+  .video-carousel__controls button,
+  .video-slide__play,
+  .video-carousel__dots button {
     transition: none;
   }
 }
