@@ -2,6 +2,7 @@
 title: "Real-time Remote Tracking and Autonomous Planning for Whale Rendezvous using Robots"
 collection: publications
 category: conferences
+research_areas: [whale]
 permalink: /publication/2025-ISER-Whale-Rendezvous
 date: 2025-01-01
 venue: "International Symposium of Experimental Robotics (ISER)"

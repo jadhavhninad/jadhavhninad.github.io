@@ -2,6 +2,7 @@
 title: "Reinforcement learning–based framework for whale rendezvous via autonomous sensing robots"
 collection: publications
 category: manuscripts
+research_areas: [whale]
 permalink: /publication/2024-Science-Robotics-number-7
 date: 2024-10-30
 venue: 'Science Robotics'

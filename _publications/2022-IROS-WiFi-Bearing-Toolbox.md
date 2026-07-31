@@ -2,6 +2,7 @@
 title: "Toolbox Release: A WiFi-Based Relative Bearing Framework for Robotics"
 collection: publications
 category: conferences
+research_areas: [multi_robot_wifi]
 permalink: /publication/2022-IROS-WiFi-Bearing-Toolbox
 date: 2022-01-01
 venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"

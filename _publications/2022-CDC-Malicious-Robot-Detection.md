@@ -2,6 +2,7 @@
 title: "Adaptive Malicious Robot Detection in Dynamic Topologies"
 collection: publications
 category: conferences
+research_areas: [multi_robot_wifi]
 permalink: /publication/2022-CDC-Malicious-Robot-Detection
 date: 2022-01-01
 venue: "IEEE 61st Conference on Decision and Control (CDC)"

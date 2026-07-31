@@ -2,6 +2,7 @@
 title: "WiFi-CSI Sensing and Bearing Estimation in Multi-Robot Systems: An Open-Source Simulation Framework"
 collection: publications
 category: conferences
+research_areas: [multi_robot_wifi]
 permalink: /publication/2024-ICRA40-WiFi-CSI-Simulation
 date: 2024-01-01
 venue: "40th Anniversary of the IEEE International Conference on Robotics and Automation (ICRA@40)"

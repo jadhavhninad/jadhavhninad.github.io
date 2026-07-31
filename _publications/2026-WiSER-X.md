@@ -2,6 +2,7 @@
 title: "WiSER-X: Wireless Signals-based Efficient Decentralized Multi-Robot Exploration without Explicit Information Exchange"
 collection: publications
 category: manuscripts
+research_areas: [multi_robot_wifi]
 permalink: /publication/2026-WiSER-X
 date: 2026-01-01
 venue: "IEEE Robotics and Automation Letters (RA-L)"

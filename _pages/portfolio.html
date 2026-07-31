@@ -1,15 +1,15 @@
 ---
 layout: archive
-title: "Research"
+title: "Research Areas"
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
-My research combines multi-robot coordination, wireless sensing, artificial intelligence, and field robotics to build autonomous systems that operate in complex real-world environments.
+My research combines multi-robot coordination, wireless sensing, artificial intelligence, and field robotics to build autonomous systems that operate in complex real-world environments. Select a research area to see its projects and associated publications.
 
-
-{% for post in site.portfolio %}
+{% assign research_areas = site.portfolio | sort: "order" %}
+{% for post in research_areas %}
   {% include archive-single.html %}
 {% endfor %}

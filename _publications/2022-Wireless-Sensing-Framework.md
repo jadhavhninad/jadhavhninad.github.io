@@ -2,6 +2,7 @@
 title: "A wireless signal-based sensing framework for robotics"
 collection: publications
 category: manuscripts
+research_areas: [multi_robot_wifi]
 permalink: /publication/2022-Wireless-Sensing-Framework
 date: 2022-01-01
 venue: "The International Journal of Robotics Research (IJRR)"
