@@ -1,0 +1,21 @@
+{% assign publication_category = include.category %}
+{% assign related_publications_count = 0 %}
+{% for publication in site.publications %}
+  {% if publication.category == publication_category and publication.research_areas contains page.research_area %}
+    {% assign related_publications_count = related_publications_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% if related_publications_count > 0 %}
+  <div class="section-heading">
+    <h2>{{ include.title }}</h2>
+    <span class="section-count">{{ related_publications_count }} {% if related_publications_count == 1 %}paper{% else %}papers{% endif %}</span>
+  </div>
+  <div class="publication-list">
+    {% for post in site.publications reversed %}
+      {% if post.category == publication_category and post.research_areas contains page.research_area %}
+        {% include research-publication-card.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

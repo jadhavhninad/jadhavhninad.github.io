@@ -5,7 +5,9 @@ permalink: /talks/
 author_profile: true
 ---
 
-Selected invited talks, seminars, workshops, and conference presentations.
+<div class="page-intro">
+  <p>Selected invited talks, seminars, workshops, and conference presentations on wireless sensing, multi-robot coordination, and field robotics.</p>
+</div>
 
 {% if site.talkmap_link == true %}
 
@@ -13,6 +15,8 @@ Selected invited talks, seminars, workshops, and conference presentations.
 
 {% endif %}
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+<div class="archive-card-list">
+  {% for post in site.talks reversed %}
+    {% include archive-single-talk.html %}
+  {% endfor %}
+</div>

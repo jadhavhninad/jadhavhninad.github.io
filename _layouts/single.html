@@ -17,7 +17,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page{% if page.collection %} page--{{ page.collection }}{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -35,8 +35,10 @@ layout: default
         {% endif %}
         
         {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
+          <p>{{ page.type }}, <i>{{ page.venue }}</i>{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}</p>
+        {% elsif page.collection == 'talks' %}
+          <p>{{ page.type }}, <i>{{ page.venue }}</i>{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}</p>
+        {% elsif page.collection == 'publications' and page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
@@ -45,6 +47,16 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.collection == 'publications' and page.research_areas %}
+          <div class="research-area-links" aria-label="Related research areas">
+            {% for research_area_id in page.research_areas %}
+              {% assign research_area = site.data.research_areas[research_area_id] %}
+              {% if research_area %}
+                <a class="research-area-link" href="{{ research_area.url | relative_url }}">{{ research_area.title }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl %}

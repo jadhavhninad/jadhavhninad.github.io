@@ -5,6 +5,12 @@ permalink: /experience/
 author_profile: true
 ---
 
+<div class="page-intro">
+  <p>Professional experience, education, recognition, service, and technical background.</p>
+</div>
+
+<div class="experience-page" markdown="1">
+
 ## Professional Experience
 
 ### Postdoctoral Fellow
@@ -64,3 +70,5 @@ Ad hoc reviewer for:
 - [New methods for whale tracking and rendezvous using autonomous robots — EurekAlert](https://www.eurekalert.org/news-releases/1063402)
 - [Project CETI uses AI and robotics to track down sperm whales — The Robot Report](https://www.therobotreport.com/project-ceti-uses-ai-and-robotics-to-track-down-sperm-whales/)
 - [Robots to the Rescue — Harvard SEAS](https://seas.harvard.edu/news/2022/04/robots-rescue)
+
+</div>

@@ -5,33 +5,37 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="https://scholar.google.com/citations?user=de7W4UoAAAAJ&hl=en">my Google Scholar profile</a>.</div>
-{% endif %}
+<div class="page-intro">
+  <p>Selected journal and conference publications spanning multi-robot systems, wireless sensing, autonomous field robotics, and wildlife monitoring.</p>
+  {% if site.author.googlescholar %}
+    <p class="wordwrap">For the latest citation data, visit <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
+  {% endif %}
+</div>
 
 {% include base_path %}
 
-An asterisk (*) next to an author name indicates equal contribution.
+<p class="small">An asterisk (*) next to an author name indicates equal contribution.</p>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
+{% assign journal_articles = site.publications | where: "category", "manuscripts" %}
+{% assign conference_papers = site.publications | where: "category", "conferences" %}
+
+<div class="section-heading">
+  <h2>Journal Articles</h2>
+  <span class="section-count">{{ journal_articles.size }} papers</span>
+</div>
+<div class="publication-list">
+  {% for post in journal_articles reversed %}
     {% include archive-single.html %}
   {% endfor %}
-{% endif %}
+</div>
 
+<div class="section-heading">
+  <h2>Conference Papers</h2>
+  <span class="section-count">{{ conference_papers.size }} papers</span>
+</div>
+<div class="publication-list">
+  {% for post in conference_papers reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+</div>
 

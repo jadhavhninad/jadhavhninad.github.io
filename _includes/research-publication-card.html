@@ -1,0 +1,12 @@
+<article class="compact-publication-card">
+  <div class="content-tag">
+    {% if post.category == 'manuscripts' %}Journal article{% else %}Conference paper{% endif %}
+    &nbsp;&middot;&nbsp; {{ post.date | date: "%Y" }}
+  </div>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <p class="compact-publication-card__venue">{{ post.venue }}</p>
+  <div class="compact-publication-card__actions">
+    <a href="{{ post.url | relative_url }}">View details <span aria-hidden="true">&rarr;</span></a>
+    {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper <span aria-hidden="true">&nearr;</span></a>{% endif %}
+  </div>
+</article>

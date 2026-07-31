@@ -7,21 +7,13 @@ research_area: whale
 order: 2
 ---
 
+<a class="back-link" href="{{ '/portfolio/' | relative_url }}">&larr; All research areas</a>
+
+<div class="research-lead" markdown="1">
 I design and deploy autonomous robotic systems for tracking and observing sperm whales at sea. This work combines acoustic, visual, and VHF sensing with autonomous planning on aerial and marine platforms to improve remote tracking, rendezvous, and biological data collection.
 
 The research includes waterproof drone payloads, onboard VHF directionality estimation with software-defined radios, multi-robot planning, and autonomous quadcopter deployments. These systems have been tested during field expeditions in Dominica in collaboration with marine biologists, roboticists, and Project CETI's marine operations team.
+</div>
 
-Related Publications
---------------------
-
-{% assign related_count = 0 %}
-{% for post in site.publications reversed %}
-  {% if post.research_areas contains page.research_area %}
-    {% assign related_count = related_count | plus: 1 %}
-    {% include archive-single.html %}
-  {% endif %}
-{% endfor %}
-
-{% if related_count == 0 %}
-No publications have been associated with this research area yet.
-{% endif %}
+{% include research-publications.html category="manuscripts" title="Journal Articles" %}
+{% include research-publications.html category="conferences" title="Conference Papers" %}

@@ -5,10 +5,14 @@ permalink: /teaching/
 author_profile: true
 ---
 
-Teaching and research mentoring experience at Harvard University and Arizona State University.
+<div class="page-intro">
+  <p>Teaching and research mentoring experience at Harvard University and Arizona State University, with an emphasis on hands-on robotics, autonomy, and multi-robot systems.</p>
+</div>
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="archive-card-list">
+  {% for post in site.teaching reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+</div>

@@ -7,9 +7,28 @@ author_profile: true
 
 {% include base_path %}
 
-My research combines multi-robot coordination, wireless sensing, artificial intelligence, and field robotics to build autonomous systems that operate in complex real-world environments. Select a research area to see its projects and associated publications.
+<div class="page-intro">
+  <p>My research combines multi-robot coordination, wireless sensing, artificial intelligence, and field robotics to build autonomous systems that operate in complex real-world environments.</p>
+  <p>Select an area to explore the work and browse its journal and conference publications.</p>
+</div>
 
 {% assign research_areas = site.portfolio | sort: "order" %}
-{% for post in research_areas %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="research-grid">
+  {% for post in research_areas %}
+    {% assign publication_count = 0 %}
+    {% for publication in site.publications %}
+      {% if publication.research_areas contains post.research_area %}
+        {% assign publication_count = publication_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a class="research-card" href="{{ post.url | relative_url }}">
+      <span class="research-card__number">0{{ forloop.index }}</span>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt }}</p>
+      <span class="research-card__footer">
+        <span>{{ publication_count }} related publications</span>
+        <span aria-hidden="true">Explore &rarr;</span>
+      </span>
+    </a>
+  {% endfor %}
+</div>
