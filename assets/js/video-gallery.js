@@ -119,6 +119,14 @@
       if (!carousel.contains(event.relatedTarget)) resumeAfterInteraction();
     });
 
+    // Not every video has a maxresdefault poster; fall back to the 4:3 hqdefault.
+    carousel.querySelectorAll(".video-slide__poster img").forEach(function (poster) {
+      poster.addEventListener("error", function () {
+        if (poster.src.indexOf("maxresdefault") === -1) return;
+        poster.src = poster.src.replace("maxresdefault", "hqdefault");
+      });
+    });
+
     carousel.querySelectorAll("[data-video-play]").forEach(function (playLink) {
       playLink.addEventListener("click", function (event) {
         event.preventDefault();
